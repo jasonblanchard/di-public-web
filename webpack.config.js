@@ -65,7 +65,8 @@ module.exports = {
     proxy: {
       '/api': {
         target: 'http://192.168.64.6:30873'
-        // target: 'http://localhost:4000'
+        // target: 'http://localhost:8081',
+        // pathRewrite: { '^/api/authn': '' }
       },
     },
   },

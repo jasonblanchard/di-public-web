@@ -15,8 +15,21 @@ export default function LoginExperienceConnector({ children }: LoginExperienceCo
   const [didLoginFail, setDidLoginFail] = useState(false);
 
   async function handleSubmitLoginForm({ username, password }: { username: string, password: string }) {
-    // TODO: Make the API call
     submitIsLoginSubmitting(true);
+    setDidLoginFail(false);
+    const response = await fetch('/api/authn/login', {
+      method: 'POST',
+      body: JSON.stringify({ username, password }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      submitIsLoginSubmitting(false);
+      window.location.href= '/workspace/';
+      return;
+    }
+
+    submitIsLoginSubmitting(false);
     setDidLoginFail(true);
   }
 
