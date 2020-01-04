@@ -11,7 +11,7 @@ export default function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/login" exact>
+        <Route path="/anon/login" exact>
           <LoginPage />
         </Route>
       </Switch>
