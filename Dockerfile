@@ -18,7 +18,7 @@ COPY --chown=docker:docker babel.config.js $APP_HOME/babel.config.js
 
 RUN npm run build --production
 
-FROM jasonblanchard/di-fe-server AS release
+FROM jasonblanchard/di-fe-server:77e6dcca2b1ee98594d919a5c17ffe0ad14d9e7d AS release
 
 USER docker
 WORKDIR $APP_HOME
