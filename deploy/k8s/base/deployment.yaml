@@ -17,7 +17,7 @@ spec:
     spec:
       serviceAccountName: public-web
       containers:
-      - image: jasonblanchard/di-public-web
+      - image: jasonblanchard/di-public-web:v2 # {"$ref":"#/definitions/io.k8s.cli.substitutions.image"}
         name: public-web
         envFrom:
         - configMapRef:
