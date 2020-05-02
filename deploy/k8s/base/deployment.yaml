@@ -6,7 +6,7 @@ metadata:
   name: public-web
   namespace: di
 spec:
-  replicas: 1
+  replicas: 1 # {"$ref":"#/definitions/io.k8s.cli.setters.replicas"}
   selector:
     matchLabels:
       app: public-web
@@ -20,8 +20,8 @@ spec:
       - image: jasonblanchard/di-public-web
         name: public-web
         envFrom:
-          - configMapRef:
-              name: public-web-config
+        - configMapRef:
+            name: public-web-config
         livenessProbe:
           httpGet:
             path: /health
@@ -31,5 +31,4 @@ spec:
             path: /health
             port: 8080
         ports:
-          - containerPort: 8080
-
+        - containerPort: 8080
