@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build
-      run: make build
+        run: make build
   push:
     needs: build
     runs-on: ubuntu-latest
