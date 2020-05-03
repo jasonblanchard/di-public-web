@@ -9,7 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build
-        run: docker build -t jasonblanchard/di-public-web .
+        # run: docker build -t jasonblanchard/di-public-web .
+        run: ls -al
   push:
     needs: build
     runs-on: ubuntu-latest
