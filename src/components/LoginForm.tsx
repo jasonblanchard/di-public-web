@@ -44,9 +44,9 @@ export default function LoginForm({ onSubmit, isDisabled }: LoginForm) {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <Label htmlFor="username">Username:</Label>
+        <Label htmlFor="username">Schmusername:</Label>
         <input
-          id="schmusername"
+          id="username"
           name={usernameField.input.name}
           value={usernameField.input.value}
           onBlur={usernameField.input.onBlur}
