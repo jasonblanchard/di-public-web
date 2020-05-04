@@ -14,6 +14,3 @@ configMapGenerator:
   - BASE_PATH='/anon/'
   - PAGE_TITLE='Di'
   - APP_CONTAINER_ID='app'
-images:
-- name: jasonblanchard/di-public-web
-  newTag: latest
