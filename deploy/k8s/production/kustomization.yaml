@@ -1,8 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-replicas:
-- name: pubic-web
-  count: 1 # {"$ref":"#/definitions/io.k8s.cli.setters.replicas"}
+# replicas:
+# - name: pubic-web
+#   count: 1 # {"$ref":"#/definitions/io.k8s.cli.setters.replicas"}
 bases:
 - ../base
 images:
