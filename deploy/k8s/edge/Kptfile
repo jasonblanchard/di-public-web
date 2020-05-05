@@ -1,9 +1,7 @@
 apiVersion: kpt.dev/v1alpha1
 kind: Kptfile
 metadata:
-  name: .
-packageMetadata:
-  shortDescription: sample description
+  name: di-public-web-edge
 openAPI:
   definitions:
     io.k8s.cli.setters.replicas:
@@ -16,7 +14,7 @@ openAPI:
       x-k8s-cli:
         setter:
           name: tag
-          value: latest
+          value: "latest"
           setBy: package-default
     io.k8s.cli.substitutions.image:
       x-k8s-cli:

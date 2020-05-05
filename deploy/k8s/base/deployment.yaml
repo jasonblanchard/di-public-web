@@ -6,7 +6,7 @@ metadata:
   labels:
     app: public-web
 spec:
-  replicas: 1 # {"$ref":"#/definitions/io.k8s.cli.setters.replicas"}
+  replicas: 1
   selector:
     matchLabels:
       app: public-web
@@ -18,7 +18,7 @@ spec:
       serviceAccountName: public-web
       containers:
       - name: public-web
-        image: jasonblanchard/di-public-web:latest # {"$ref":"#/definitions/io.k8s.cli.substitutions.image"}
+        image: jasonblanchard/di-public-web
         ports:
         - containerPort: 8080
         envFrom:
